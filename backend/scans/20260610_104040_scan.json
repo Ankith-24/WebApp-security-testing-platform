@@ -1,0 +1,35 @@
+{
+    "target": "yenepoya.edu.in",
+    "ports": [],
+    "services": [],
+    "headers": {
+        "date": "Wed, 10 Jun 2026 05:10:40 GMT",
+        "server": "Apache/2.4.52 (Ubuntu)",
+        "location": "https://www.yenepoya.edu.in/",
+        "content-type": "text/html; charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN"
+    },
+    "findings": [
+        {
+            "title": "Missing Security Header: HSTS",
+            "severity": "Medium",
+            "description": "Missing HTTP Strict Transport Security header."
+        },
+        {
+            "title": "Missing Security Header: X-Content-Type-Options",
+            "severity": "Low",
+            "description": "Missing X-Content-Type-Options header."
+        },
+        {
+            "title": "Missing Security Header: Content-Security-Policy",
+            "severity": "High",
+            "description": "Missing Content-Security-Policy header, susceptible to XSS."
+        },
+        {
+            "title": "Server Banner Exposure",
+            "severity": "Low",
+            "description": "Server version exposed: Apache/2.4.52 (Ubuntu)"
+        }
+    ],
+    "riskLevel": "Medium"
+}
