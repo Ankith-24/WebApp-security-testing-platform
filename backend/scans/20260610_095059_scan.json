@@ -1,0 +1,31 @@
+{
+    "target": "ibm.com",
+    "ports": [],
+    "services": [],
+    "headers": {
+        "server": "AkamaiGHost",
+        "content-length": "0",
+        "location": "https://www.ibm.com/in-en",
+        "cache-control": "max-age=600",
+        "expires": "Wed, 10 Jun 2026 04:30:59 GMT",
+        "date": "Wed, 10 Jun 2026 04:20:59 GMT",
+        "connection": "keep-alive",
+        "strict-transport-security": "max-age=31536000",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "content-security-policy": "upgrade-insecure-requests",
+        "set-cookie": "bm_sz=4E37DADABEE01564F21CF8D1BA0A0D9F~YAAQF2bJFzbBIGyeAQAA7RjDrwCiQdukAnL0oSjSip8GAKgQ6NCqtHavsqFpdAxT/SEKyxeKA76BlpUPwiyx+TJiPovNVLKLVjaSDaI8Og8SQ/+mT5OW7W3LGfcgRYxGO/KKSRtLrX4VwlSBZjVci53Haa7qx9Sy0fKOK0nGrnYSemASOfZOqye9wnBHk+vdAHCE5FX3QcbFVZs1VBY5nbxFewye278ZybN1A+jp59/Sb9LoC1wwVSPHqKWobemVnm79YOvuqZVkgsflxJBdkDQSqy6CLKIeO+1iWO1aEXx6o0iw5AZItDuHzUWOsAbY+JJcHmMiRsjbjHRBnMiR0g+0QtfApUKi1lTXvLVwy1cYgQr75A/TiYnkU+wL23Lsj58zVg==~4601136~3421505; Domain=.ibm.com; Path=/; Expires=Wed, 10 Jun 2026 08:20:59 GMT; Max-Age=14400",
+        "x-frame-options": "SAMEORIGIN",
+        "last-modified": "Wed, 10 Jun 2026 04:00:48 GMT",
+        "etag": "\"360ea-653de49e79020-gzip\"",
+        "content-type": "text/html;charset=utf-8"
+    },
+    "findings": [
+        {
+            "title": "Server Banner Exposure",
+            "severity": "Low",
+            "description": "Server version exposed: AkamaiGHost"
+        }
+    ],
+    "riskLevel": "Low"
+}

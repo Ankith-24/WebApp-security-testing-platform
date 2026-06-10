@@ -1,0 +1,35 @@
+SECURITY SCAN REPORT
+====================
+Target: google.com
+Scan Date: 2026-06-10 10:57:56
+Risk Level: Medium
+
+OPEN PORTS & SERVICES
+---------------------
+
+HTTP HEADERS
+------------
+location: http://www.google.com/
+content-type: text/html; charset=ISO-8859-1
+content-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-hzYZah1dS4TaHlrd0oV2Xw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+date: Wed, 10 Jun 2026 05:27:55 GMT
+expires: Wed, 10 Jun 2026 05:27:55 GMT
+cache-control: private
+server: gws
+content-length: 219
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+p3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+set-cookie: NID=532=NvlTGciVGnu66eGmURldyFNUPe1Ku3CX9N6GrF_nO5kWpJnViZKGIwxUY3dswl8E7fuYyNZf4QzE0bCcYj4-LI7wAI5vAV0yBAR-KmaQ5urzcbIFOklK0qufOR2R7q9gOZYCHFXyJOcbifNEfAj1IiwEwGKQv0xSg-dRDquaTH32wI20OAHIQIGHInC4tVlzrUiYIiFgPBC_-23Ligw; expires=Thu, 10-Dec-2026 05:27:55 GMT; path=/; domain=.google.com; HttpOnly
+transfer-encoding: chunked
+
+SECURITY FINDINGS
+-----------------
+[Medium] Missing Security Header: HSTS: Missing HTTP Strict Transport Security header.
+[Low] Missing Security Header: X-Content-Type-Options: Missing X-Content-Type-Options header.
+[High] Missing Security Header: Content-Security-Policy: Missing Content-Security-Policy header, susceptible to XSS.
+[Low] Server Banner Exposure: Server version exposed: gws
+
+RECOMMENDATIONS
+---------------
+- Plan mitigation for Medium severity findings in the next patch cycle.

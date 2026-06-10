@@ -1,0 +1,27 @@
+SECURITY SCAN REPORT
+====================
+Target: yenepoya.edu.in
+Scan Date: 2026-06-10 11:03:42
+Risk Level: Medium
+
+OPEN PORTS & SERVICES
+---------------------
+
+HTTP HEADERS
+------------
+date: Wed, 10 Jun 2026 05:33:41 GMT
+server: Apache/2.4.52 (Ubuntu)
+location: https://www.yenepoya.edu.in/
+content-type: text/html; charset=UTF-8
+x-frame-options: SAMEORIGIN
+
+SECURITY FINDINGS
+-----------------
+[Medium] Missing Security Header: HSTS: Missing HTTP Strict Transport Security header.
+[Low] Missing Security Header: X-Content-Type-Options: Missing X-Content-Type-Options header.
+[High] Missing Security Header: Content-Security-Policy: Missing Content-Security-Policy header, susceptible to XSS.
+[Low] Server Banner Exposure: Server version exposed: Apache/2.4.52 (Ubuntu)
+
+RECOMMENDATIONS
+---------------
+- Plan mitigation for Medium severity findings in the next patch cycle.

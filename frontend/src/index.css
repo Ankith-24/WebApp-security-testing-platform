@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neu-bg: #e0e5ec;
+  --color-neu-text: #7a8599;
+  --color-neu-textdark: #4a5568;
+  --color-neu-accent: #4299e1;
+  --color-neu-accenthover: #3182ce;
+  --color-neu-red: #fc8181;
+  --color-neu-green: #68d391;
+  --color-neu-yellow: #f6ad55;
+
+  --shadow-neu-outer: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+  --shadow-neu-outer-hover: 12px 12px 20px rgba(163,177,198,0.7), -12px -12px 20px rgba(255,255,255, 0.6);
+  --shadow-neu-outer-active: inset 6px 6px 10px 0 rgba(163,177,198, 0.7), inset -6px -6px 10px 0 rgba(255,255,255, 0.6);
+  --shadow-neu-inner: inset 6px 6px 10px 0 rgba(163,177,198, 0.5), inset -6px -6px 10px 0 rgba(255,255,255, 0.6);
+}
+
+@layer base {
+  body {
+    @apply bg-neu-bg text-neu-text font-sans antialiased min-h-screen selection:bg-neu-accent selection:text-white;
+    font-family: 'Nunito', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-neu-textdark font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .neu-panel {
+    @apply bg-neu-bg rounded-3xl shadow-neu-outer p-8 transition-all duration-300;
+  }
+  .neu-panel-inner {
+    @apply bg-neu-bg rounded-2xl shadow-neu-inner p-6;
+  }
+  .neu-button {
+    @apply flex items-center justify-center gap-2 bg-neu-bg text-neu-textdark font-semibold rounded-2xl shadow-neu-outer hover:shadow-neu-outer-hover hover:text-neu-accent active:shadow-neu-outer-active px-6 py-3 transition-all duration-200 cursor-pointer border-none;
+  }
+  .neu-button-primary {
+    @apply flex items-center justify-center gap-2 bg-neu-accent text-white font-semibold rounded-2xl shadow-neu-outer hover:bg-neu-accenthover active:shadow-neu-outer-active px-6 py-3 transition-all duration-200 cursor-pointer border-none;
+  }
+  .neu-input {
+    @apply w-full bg-neu-bg text-neu-textdark font-medium rounded-2xl shadow-neu-inner px-6 py-4 focus:outline-none focus:ring-2 focus:ring-neu-accent/50 transition-all duration-300 placeholder:text-neu-text/50 border-none;
+  }
+  .neu-badge {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full shadow-neu-outer text-xs font-bold uppercase tracking-wider;
+  }
+}

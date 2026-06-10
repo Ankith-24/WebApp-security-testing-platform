@@ -1,0 +1,33 @@
+SECURITY SCAN REPORT
+====================
+Target: httpforever.com
+Scan Date: 2026-06-10 09:51:46
+Risk Level: Medium
+
+OPEN PORTS & SERVICES
+---------------------
+
+HTTP HEADERS
+------------
+server: nginx/1.18.0 (Ubuntu)
+date: Wed, 10 Jun 2026 04:21:46 GMT
+content-type: text/html
+content-length: 5124
+last-modified: Wed, 22 Mar 2023 14:54:48 GMT
+connection: keep-alive
+etag: "641b16b8-1404"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+feature-policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+content-security-policy: default-src 'self'; script-src cdnjs.cloudflare.com 'self' 'report-sha256'; style-src cdnjs.cloudflare.com 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.googleapis.com fonts.gstatic.com cdnjs.cloudflare.com; frame-ancestors 'none'; report-uri https://scotthelme.report-uri.com/r/d/csp/enforce
+accept-ranges: bytes
+
+SECURITY FINDINGS
+-----------------
+[Medium] Missing Security Header: HSTS: Missing HTTP Strict Transport Security header.
+[Medium] Missing Security Header: X-Frame-Options: Missing X-Frame-Options header, vulnerable to clickjacking.
+[Low] Server Banner Exposure: Server version exposed: nginx/1.18.0 (Ubuntu)
+
+RECOMMENDATIONS
+---------------
+- Plan mitigation for Medium severity findings in the next patch cycle.
